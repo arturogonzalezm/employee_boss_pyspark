@@ -23,8 +23,7 @@ def process_employee_data():
 
     # Perform a self-join to get boss names
     result = spark.sql("""
-        SELECT e.Name AS Employee,
-               COALESCE(b.Name, 'No Boss') AS Boss
+        SELECT e.Name AS Employee, COALESCE(b.Name, 'No Boss') AS Boss
         FROM employees e
         LEFT JOIN employees b ON e.Boss = b.ID
         ORDER BY e.ID
