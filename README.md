@@ -1,3 +1,7 @@
+[![codecov](https://codecov.io/gh/arturogonzalezm/employee_boss_pyspark/graph/badge.svg?token=c3OCE7y4W3)](https://codecov.io/gh/arturogonzalezm/employee_boss_pyspark)
+[![PyLint](https://github.com/arturogonzalezm/employee_boss_pyspark/actions/workflows/workflow.yml/badge.svg)](https://github.com/arturogonzalezm/employee_boss_pyspark/actions/workflows/workflow.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
+
 # Employee Boss using PySpark
 
 ### Instructions: 
