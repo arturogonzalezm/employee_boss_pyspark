@@ -19,8 +19,9 @@
 The project consists of three main Python files:
 
 1. `spark_session.py`: Contains the SparkSessionManager class.
-2. `data_generator.py`: Generates sample employee data.
-3. `process_data.py`: Main script to process the data using PySpark.
+2. `sample_data.py`: Contains the sample employee data.
+3. `process_employee_data.py`: Main script to process the data using PySpark.
+4. `main.py`: Entry point to run the project.
 
 ## Components
 
