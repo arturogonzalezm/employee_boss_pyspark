@@ -52,25 +52,20 @@ The main data processing logic:
 ```python
 def process_employee_data():
     spark = SparkSessionManager.get_instance()
-    
-    # Create DataFrame
-    df = spark.createDataFrame(process_employee_data(), schema)
-    
-    # Create temporary view
+
+    schema = ["ID", "Name", "Boss"]
+
+    df = spark.createDataFrame(data, schema)
     df.createOrReplaceTempView("employees")
-    
-    # Perform analysis
+
     result = spark.sql("""
         SELECT e.Name AS Employee,
-               COALESCE(b.Name, 'No Boss') AS Boss,
-               e.Role,
-               e.Department,
-               e.Salary
+               COALESCE(b.Name, 'No Boss') AS Boss
         FROM employees e
         LEFT JOIN employees b ON e.Boss = b.ID
         ORDER BY e.ID
     """)
-    
+
     result.show()
 ```
 
