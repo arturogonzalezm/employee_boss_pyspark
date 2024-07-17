@@ -89,8 +89,7 @@ The following diagram illustrates the flow of data and control in the Employee-B
 ```mermaid
 graph TD
     A[Start] --> B[SparkSessionManager]
-    B --> C[Generate Employee Data]
-    C --> D[Create PySpark DataFrame]
+    B --> D[Create PySpark DataFrame]
     D --> E[Create Temporary View]
     E --> F[Execute SQL Query]
     F --> G[Display Results]
@@ -108,14 +107,9 @@ graph TD
     H
     end
 
-    subgraph "Data Generation"
-    C
-    end
-
     style A fill:#f9f,stroke:#333,stroke-width:4px
     style I fill:#f9f,stroke:#333,stroke-width:4px
     style B fill:#bbf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
-    style C fill:#bfb,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
     style D fill:#fbb,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
     style E fill:#fbb,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
     style F fill:#fbb,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
